@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VibeFolio - Frontend
 
-## Getting Started
+A modern, interactive portfolio platform with a social media-inspired interface built using Next.js and TypeScript.
 
-First, run the development server:
+## 🚀 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+VibeFolio is a dynamic portfolio platform that helps professionals showcase their work through interactive, social media-style profiles. The frontend delivers an engaging user experience with smooth animations, responsive design, and seamless media integration.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Interactive Video Player**: Centralized video player with dynamic content switching
+- **Circular Container Layout**: Animated circular arrangement of portfolio items
+- **Responsive Design**: Optimized for all device sizes
+- **TypeScript Support**: Full type safety and better development experience
+- **Smooth Animations**: Framer Motion powered transitions and interactions
+- **Real-time Updates**: Dynamic content loading and state management
+- **Modern UI/UX**: Clean, professional interface with social media elements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **State Management**: React Hooks (useState, useEffect)
+- **HTTP Client**: Native Fetch API
+- **Video Handling**: HTML5 Video API
