@@ -20,7 +20,7 @@ export default function EditableProfilePicture() {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/about');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -113,7 +113,6 @@ export default function EditableProfilePicture() {
     }
   };
 
-  // The return statement remains exactly the same...
   return (
     <div className="relative w-fit mx-auto">
       {/* Profile Picture with Edit Button */}
@@ -152,9 +151,9 @@ export default function EditableProfilePicture() {
           whileTap={{ scale: 0.9 }}
           onClick={() => setShowEdit(true)}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-          </svg>
+          </svg> */}
         </motion.button>
 
         <input

@@ -56,7 +56,7 @@ const Contact = ({ onClose }: ContactProps) => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:3000/api/uploademail', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/uploademail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

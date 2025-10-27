@@ -21,7 +21,7 @@ export default function FeedPosts() {
     async function fetchData() {
       try {
         // Fetch posts
-        const postsRes = await fetch('http://localhost:5000/api/posts');
+        const postsRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`);
         if (!postsRes.ok) throw new Error('Failed to fetch posts');
         const postsData = await postsRes.json();
         
@@ -36,7 +36,7 @@ export default function FeedPosts() {
         setPosts(postsArray.map((item: Post) => item.nContentLink));
 
         // Fetch user data
-        const userRes = await fetch('http://localhost:5000/api/about');
+        const userRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about`);
         if (!userRes.ok) throw new Error('Failed to fetch user data');
         const userData = await userRes.json();
         setUserData(userData.data);

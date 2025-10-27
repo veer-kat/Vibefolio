@@ -13,7 +13,7 @@ const Skeels = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/skills');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/skills`);
         const data = await response.json();
         if (data.success) {
           setSkills(data.data);

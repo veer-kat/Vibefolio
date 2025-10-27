@@ -40,7 +40,7 @@ const Containers = ({ selectedIndex, setSelectedIndex }: ContainersProps) => {
   useEffect(() => {
     const fetchVentures = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/ventures');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/ventures`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
