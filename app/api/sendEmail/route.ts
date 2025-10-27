@@ -65,7 +65,7 @@ export async function POST(request: Request) {
       html: `
         <div>
           <h2>Hello,</h2>
-          <p>I'm Veer Katrodia, aspiring Software Developer</p>
+          <p>I'm Veer Katrodia, aspiring Design & Technology Manager</p>
           <p>Here are my contact details:</p>
           <ul>
             <li>Email: veerpkatrodia@gmail.com</li>

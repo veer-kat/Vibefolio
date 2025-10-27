@@ -64,9 +64,9 @@ const Contact = ({ onClose }: ContactProps) => {
         body: JSON.stringify({ email }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit email');
-      }
+      // if (!response.ok) {
+      //   throw new Error('Failed to submit email');
+      // }
 
       setIsSuccess(true);
       setTimeout(() => {
