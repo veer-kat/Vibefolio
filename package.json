@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "framer-motion": "^12.7.4",
-    "next": "15.3.1",
+    "next": "^15.5.9",
     "next-cloudinary": "^6.16.0",
     "nodemailer": "^7.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.1.4",
+    "react-dom": "^19.1.4",
     "swiper": "^11.2.6"
   },
   "devDependencies": {
