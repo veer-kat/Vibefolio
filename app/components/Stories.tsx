@@ -18,15 +18,15 @@ export default function Stories() {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stories`);
         if (!res.ok) throw new Error('Failed to fetch stories');
         const data = await res.json();
-        
-        const storiesArray = Array.isArray(data) 
-          ? data 
-          : Array.isArray(data.data) 
-            ? data.data 
-            : Array.isArray(data.stories) 
-              ? data.stories 
+
+        const storiesArray = Array.isArray(data)
+          ? data
+          : Array.isArray(data.data)
+            ? data.data
+            : Array.isArray(data.stories)
+              ? data.stories
               : [];
-        
+
         setStories(storiesArray.slice(0, 6));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Fetch error');
@@ -46,7 +46,7 @@ export default function Stories() {
     setSelectedStory(null);
   };
 
-  if (loading) return <div style={{ textAlign: 'center' }}>Loading stories...</div>;
+  if (loading) return <div style={{ textAlign: 'center' }}>Loading stories...Render.com on free plan takes 50s to load the custom api, please have patience</div>;
   if (error) return <div style={{ textAlign: 'center' }}>Error: {error}</div>;
 
   return (
@@ -59,7 +59,7 @@ export default function Stories() {
         flexWrap: 'wrap'
       }}>
         {stories.map((story, i) => (
-          <div 
+          <div
             key={i}
             onClick={() => openOverlay(story)}
             style={{
@@ -72,7 +72,7 @@ export default function Stories() {
               transition: 'transform 0.2s ease',
             }}
           >
-            <div 
+            <div
               style={{
                 width: '112.5px',
                 height: '150px',
@@ -83,14 +83,14 @@ export default function Stories() {
               }}
             >
               {story.aContentLink?.match(/\.(jpe?g|png|gif|webp)$/i) ? (
-                <img 
-                  src={story.aContentLink} 
-                  alt="Story" 
-                  style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    objectFit: 'cover' 
-                  }} 
+                <img
+                  src={story.aContentLink}
+                  alt="Story"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
               ) : (
                 <div style={{
@@ -110,7 +110,7 @@ export default function Stories() {
 
       {/* Overlay */}
       {selectedStory && (
-        <div 
+        <div
           onClick={closeOverlay}
           style={{
             position: 'fixed',
@@ -125,7 +125,7 @@ export default function Stories() {
             zIndex: 1000,
           }}
         >
-          <div 
+          <div
             onClick={(e) => e.stopPropagation()}
             style={{
               width: '478.125px',
@@ -163,9 +163,9 @@ export default function Stories() {
 
             {/* Content */}
             {selectedStory.aContentLink?.match(/\.(jpe?g|png|gif|webp)$/i) ? (
-              <img 
-                src={selectedStory.aContentLink} 
-                alt="Story content" 
+              <img
+                src={selectedStory.aContentLink}
+                alt="Story content"
                 style={{
                   width: '100%',
                   height: '100%',
