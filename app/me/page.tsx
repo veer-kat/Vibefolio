@@ -17,59 +17,59 @@ interface UserData {
 }
 
 const techStack = [
-  { 
-    name: 'MongoDB', 
+  {
+    name: 'MongoDB',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
     color: 'text-green-500',
-    docs: 'https://www.mongodb.com/docs/' 
+    docs: 'https://www.mongodb.com/docs/'
   },
-  { 
-    name: 'Express', 
+  {
+    name: 'Express',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
     color: 'text-gray-400',
-    docs: 'https://expressjs.com/' 
+    docs: 'https://expressjs.com/'
   },
-  { 
-    name: 'Next.js', 
+  {
+    name: 'Next.js',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
     color: 'text-white',
-    docs: 'https://nextjs.org/docs' 
+    docs: 'https://nextjs.org/docs'
   },
-  { 
-    name: 'Node.js', 
+  {
+    name: 'Node.js',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
     color: 'text-green-600',
-    docs: 'https://nodejs.org/en/docs/' 
+    docs: 'https://nodejs.org/en/docs/'
   },
-  { 
-    name: 'HTML', 
+  {
+    name: 'HTML',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
     color: 'text-orange-500',
-    docs: 'https://developer.mozilla.org/en-US/docs/Web/HTML' 
+    docs: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
   },
-  { 
-    name: 'CSS', 
+  {
+    name: 'CSS',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     color: 'text-blue-500',
-    docs: 'https://developer.mozilla.org/en-US/docs/Web/CSS' 
+    docs: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
   },
-  { 
-    name: 'JavaScript', 
+  {
+    name: 'JavaScript',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
     color: 'text-yellow-400',
-    docs: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' 
+    docs: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
   },
-  { 
-    name: 'Android', 
+  {
+    name: 'Android',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
     color: 'text-green-400',
-    docs: 'https://developer.android.com/studio' 
+    docs: 'https://developer.android.com/studio'
   },
-  { 
-    name: 'Java', 
+  {
+    name: 'Java',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
     color: 'text-red-500',
-    docs: 'https://docs.oracle.com/en/java/' 
+    docs: 'https://docs.oracle.com/en/java/'
   }
 ];
 
@@ -86,7 +86,7 @@ export default function Home() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        
+
         if (result.success) {
           setUserData({
             name: result.data?.username || '',
@@ -103,7 +103,7 @@ export default function Home() {
         setLoading(false);
       }
     };
-  
+
     fetchAboutData();
   }, []);
 
@@ -120,7 +120,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen pb-[25vh]">
       <Navbar />
-      
+
       {/* Profile Section */}
       <div className="pt-20 px-4 max-w-4xl mx-auto">
         <div className="flex items-start gap-8">
@@ -138,47 +138,47 @@ export default function Home() {
                 <p className="font-inter text-gray-400 text-sm leading-relaxed max-w-2xl mb-4">
                   {userData.bio}
                 </p>
-                
+
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-4">
                   {userData.links?.instagram && (
-                    <button 
+                    <button
                       onClick={() => handleSocialClick(userData.links?.instagram)}
                       className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer"
                     >
-                      <Image 
-                        src="/Instagram.png" 
-                        alt="Instagram" 
-                        width={16} 
-                        height={16} 
+                      <Image
+                        src="/instagram.png"
+                        alt="Instagram"
+                        width={16}
+                        height={16}
                       />
                     </button>
                   )}
-                  
+
                   {userData.links?.linkedin && (
-                    <button 
+                    <button
                       onClick={() => handleSocialClick(userData.links?.linkedin)}
                       className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer"
                     >
-                      <Image 
-                        src="/LinkedIn.png" 
-                        alt="LinkedIn" 
-                        width={16} 
-                        height={16} 
+                      <Image
+                        src="/linkedIn.png"
+                        alt="LinkedIn"
+                        width={16}
+                        height={16}
                       />
                     </button>
                   )}
-                  
+
                   {userData.links?.github && (
-                    <button 
+                    <button
                       onClick={() => handleSocialClick(userData.links?.github)}
                       className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer"
                     >
-                      <Image 
-                        src="/Github.png" 
-                        alt="Github" 
-                        width={16} 
-                        height={16} 
+                      <Image
+                        src="/github.png"
+                        alt="Github"
+                        width={16}
+                        height={16}
                       />
                     </button>
                   )}
@@ -194,7 +194,7 @@ export default function Home() {
         <div className="marquee-container py-6">
           <div className="marquee-content flex">
             {[...techStack, ...techStack].map((tech, index) => (
-              <div 
+              <div
                 key={`${tech.name}-${index}`}
                 className="flex-shrink-0 mx-8 cursor-pointer group"
                 onClick={() => handleTechClick(tech.docs)}
@@ -204,10 +204,10 @@ export default function Home() {
                     {/* White circle background */}
                     <div className="absolute inset-0 bg-white rounded-full blur-md opacity-30"></div>
                     <div className="relative z-10 h-16 w-16 bg-white rounded-full flex items-center justify-center p-3 group-hover:scale-110 transition-transform">
-                      <img 
-                        src={tech.logo} 
-                        alt={tech.name} 
-                        className="h-10 w-10 object-contain" 
+                      <img
+                        src={tech.logo}
+                        alt={tech.name}
+                        className="h-10 w-10 object-contain"
                       />
                     </div>
                   </div>
